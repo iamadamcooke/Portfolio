@@ -10,7 +10,7 @@ TEMPLATE_DEBUG = DEBUG
 PRODUCTION_ENVIRONMENT = False
 
 # Main URL for the project
-BASE_URL = 'http://whoami'
+BASE_URL = 'file:///Users/adamcooke/Code/Personal/Portfolio'
 
 AUTH_PROFILE_MODULE = 'itsme.UserProfile'
 
@@ -22,7 +22,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'whoami',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': 'root',                  # Not used with sqlite3.
@@ -38,7 +38,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Bogota'
+TIME_ZONE = 'America/New_York'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -73,6 +73,7 @@ STATIC_ROOT = '%s/static/' % BASE_PATH
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '%s/static/' % BASE_URL
 
+
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
@@ -80,6 +81,7 @@ ADMIN_MEDIA_PREFIX = '%s/static/django-admin/' % BASE_URL
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    'file:///Users/adamcooke/Code/Personal/Portfolio/static/'
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -115,7 +117,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'whoami.urls'
+ROOT_URLCONF = 'Portfolio.urls'
 
 TEMPLATE_DIRS = (
     '%s/templates/' % BASE_PATH,
@@ -142,6 +144,7 @@ LOGGING = {
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
+            'filters': [],
             'class': 'django.utils.log.AdminEmailHandler'
         }
     },

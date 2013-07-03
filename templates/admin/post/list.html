@@ -51,7 +51,7 @@
 				<input type="checkbox" name="id[]" id="id" value="{{ post.id }}" class="checkbox">
 			</td>
 			<td class="title">
-				<a href="{% url admin.views.post_edit post.id %}">
+				<a href="{% url "admin.views.post_edit" post.id %}">
 					{{ post.title|safe }}
 				</a>
 				{% if post.get_status|lower == "draft" %}
@@ -177,7 +177,7 @@ $(document).ready(function () {
 			$('#confirmDelete').click(function(){
 				$('#mymodal').modal('hide');
 				$.ajax({
-					url: '{% url admin.views.post_delete %}',
+					url: '{% url "admin.views.post_delete" %}',
 					type: "POST",
 					data: {'id[]': id_checked, 'csrfmiddlewaretoken': '{{csrf_token}}'},
 					beforeSend: function() {

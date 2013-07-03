@@ -14,13 +14,13 @@
 	<article class="span8">
 		<ul class="breadcrumb">
 			<li>
-				<a href="{% url admin.views.blog_edit_settings %}">Blog</a> <span class="divider">/</span>
+				<a href="{% url "admin.views.blog_edit_settings" %}">Blog</a> <span class="divider">/</span>
 			</li>
 			<li class="active">
 				Settings
 			</li>
 		</ul>
-		<form class="form-vertical" action="{% url admin.views.blog_edit_settings %}" method="post">
+		<form class="form-vertical" action="{% url "admin.views.blog_edit_settings" %}" method="post">
 			{% if success_form %}
 			<div class="alert alert-success" data-dismiss="alert">
 				<a class="close">×</a>

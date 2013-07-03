@@ -33,7 +33,7 @@
 				</ul>
 			</td>
 			<td class="file">
-				<a href="{% url admin.views.media_edit m.id %}">{{ m.title|safe }}</a><br>
+				<a href="{% url "admin.views.media_edit" m.id %}">{{ m.title|safe }}</a><br>
 				{{ m.extension_file }}
 			</td>
 			<td class="date">
@@ -137,7 +137,7 @@ $(document).ready(function () {
 			$('#confirmDelete').click(function(){
 				$('#mymodal').modal('hide');
 				$.ajax({
-					url: '{% url admin.views.media_delete %}',
+					url: '{% url "admin.views.media_delete" %}',
 					type: "POST",
 					data: {'id[]': id_checked, 'csrfmiddlewaretoken': '{{csrf_token}}'},
 					beforeSend: function() {

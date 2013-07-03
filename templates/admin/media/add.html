@@ -12,7 +12,7 @@
 {% block content %}
 <section class="row">
 	<article class="span8">
-		<form class="form-vertical" action="{% url admin.views.media_add %}" method="post" enctype="multipart/form-data">
+		<form class="form-vertical" action="{% url "admin.views.media_add" %}" method="post" enctype="multipart/form-data">
 			{% if warning_form %}
 			<div class="alert" data-dismiss="alert">
 				<a class="close">×</a>

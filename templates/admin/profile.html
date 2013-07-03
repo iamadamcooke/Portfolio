@@ -27,7 +27,7 @@
 		</div>
 		<div class="tab-content">
 			<div class="tab-pane {% if not active_tab %}active{% endif %}" id="infoTab">
-				<form class="form-vertical" action="{% url admin.views.profile_info_edit %}" method="post">
+				<form class="form-vertical" action="{% url "admin.views.profile_info_edit" %}" method="post">
 					{% if success_info %}
 					<div class="row">
 						<div class="span8">
@@ -92,7 +92,7 @@
 				</form>
 			</div>
 			<div class="tab-pane {% if active_tab and active_tab == "profile" %}active{% endif %}" id="profileTab">
-				<form class="form-vertical" action="{% url admin.views.profile_edit %}" method="post">
+				<form class="form-vertical" action="{% url "admin.views.profile_edit" %}" method="post">
 					{% if success_profile %}
 					<div class="row">
 						<div class="span8">
@@ -128,7 +128,7 @@
 				</form>
 			</div>
 			<div class="tab-pane {% if active_tab and active_tab == "password" %}active{% endif %}" id="passwordTab">
-				<form class="form-vertical" action="{% url admin.views.profile_password_edit %}" method="post">
+				<form class="form-vertical" action="{% url "admin.views.profile_password_edit" %}" method="post">
 					{% if success_pass %}
 					<div class="row">
 						<div class="span8">

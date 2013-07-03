@@ -50,13 +50,13 @@
 						<a href="{{ BASE_URL }}">Blog</a>
 					</li>
 					<li>
-						<a href="{% url itsme.views.work %}">Work</a>
+						<a href="{% url "itsme.views.work" %}">Work</a>
 					</li>
 					<li>
-						<a href="{% url itsme.views.about %}">About</a>
+						<a href="{% url "itsme.views.about" %}">About</a>
 					</li>
 					<li>
-						<a href="{% url itsme.views.contact %}">Contact</a>
+						<a href="{% url "itsme.views.contact" %}">Contact</a>
 					</li>
 				</ul>
 			</nav><!-- span6 -->
@@ -74,7 +74,7 @@
 					</p>
 					<p>
 						However, if you think it is not your error or if you want to notify
-						to admin, use the <a href="{% url itsme.views.contact %}">contact page</a>.
+						to admin, use the <a href="{% url "itsme.views.contact" %}">contact page</a>.
 					</p>
 				</article>
 			</section>

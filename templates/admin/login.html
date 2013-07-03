@@ -15,7 +15,7 @@
 {% block content %}
 <section class="row">
 	<article class="span6 offset3">
-		<form class="form vertical" action="{% url admin.views.login %}" method="post">
+		<form class="form vertical" action="{% url "admin.views.login" %}" method="post">
 			{% if error_login %}
 			<div class="alert alert-error">
 				<a href="#" class="close" data-dismiss="alert">x</a>

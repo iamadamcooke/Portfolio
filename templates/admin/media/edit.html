@@ -34,7 +34,7 @@
 </section>
 <section class="row">
 	<article class="span8">
-		<form class="form-vertical" action="{% url admin.views.media_edit upload.id %}" method="post">
+		<form class="form-vertical" action="{% url "admin.views.media_edit" upload.id %}" method="post">
 			{% if success_edit %}
 			<div class="alert alert-success" data-dismiss="alert">
 				<a class="close">×</a>

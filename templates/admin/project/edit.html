@@ -22,9 +22,9 @@
 		<!-- form -->
 		<form method="post" 
 		{% if mode and mode|lower == "edit" %}
-		action="{% url admin.views.project_edit project.id %}"
+		action="{% url "admin.views.project_edit" project.id %}"
 		{% else %}
-		action="{% url admin.views.project_edit %}"
+		action="{% url "admin.views.project_edit" %}"
 		{% endif %}
 		class="form-vertical">
 		<!-- row -->
@@ -34,17 +34,17 @@
 				<!-- breadcrumb -->
 				<ul class="breadcrumb">
 					<li>
-						<a href="{% url admin.views.project %}">Projects</a> <span class="divider">/</span>
+						<a href="{% url "admin.views.project" %}">Projects</a> <span class="divider">/</span>
 					</li>
 					{% if mode and mode|lower == "edit" %}
 					<li class="active">
-						<a href="{% url admin.views.project_edit project.id %}">
+						<a href="{% url "admin.views.project_edit" project.id %}">
 							{% if project.name|length > 0 %}{{ project.name }}{% else %}Edit{% endif %}
 						</a>
 					</li>
 					{% else %}
 					<li class="active">
-						<a href="{% url admin.views.project_edit %}">Add</a>
+						<a href="{% url "admin.views.project_edit" %}">Add</a>
 					</li>
 					{% endif %}
 				</ul><!-- /breadcrumb -->
@@ -205,7 +205,7 @@ $(document).ready(function(){
 	// suggest slug
 	$('a#suggestSlug').click(function(){
 		$.ajax({
-			url: '{% url admin.views.category_get_slug %}',
+			url: '{% url "admin.views.category_get_slug" %}',
 			type: "GET",
 			data: {str: $("input[name=name]").val()},
 			success: function( data ) {

@@ -51,7 +51,7 @@
 				<input type="checkbox" name="id[]" id="id" value="{{ project.id }}" class="checkbox">
 			</td>
 			<td class="name">
-				<a href="{% url admin.views.project_edit project.id %}">
+				<a href="{% url "admin.views.project_edit" project.id %}">
 					{{ project.name|safe }}
 				</a>
 			</td>
@@ -168,7 +168,7 @@ $(document).ready(function () {
 			$('#confirmDelete').click(function(){
 				$('#mymodal').modal('hide');
 				$.ajax({
-					url: '{% url admin.views.project_delete %}',
+					url: '{% url "admin.views.project_delete" %}',
 					type: "POST",
 					data: {'id[]': id_checked, 'csrfmiddlewaretoken': '{{csrf_token}}'},
 					beforeSend: function() {

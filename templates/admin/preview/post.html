@@ -11,11 +11,11 @@
 		<time datetime="{{ post.date|date:"Y-m-d" }}">{{ post.date|date:"N d, Y" }}</time>
 	</header>
 	<p class="edit">
-		<a href="{% url admin.views.post_edit post.id %}">&larr; Continue editing</a>
+		<a href="{% url "admin.views.post_edit" post.id %}">&larr; Continue editing</a>
 	</p>
 	{{ content|safe }}
 	<p class="edit">
-		<a href="{% url admin.views.post_edit post.id %}">&larr; Continue editing</a>
+		<a href="{% url "admin.views.post_edit" post.id %}">&larr; Continue editing</a>
 	</p>
 </article>
 {% endblock %}

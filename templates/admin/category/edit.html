@@ -22,25 +22,25 @@
 		<ul class="breadcrumb">
 		{% if mode and mode|lower == "edit" %}
 		<li>
-			<a href="{% url admin.views.category %}">Categories</a> <span class="divider">/</span>
+			<a href="{% url "admin.views.category" %}">Categories</a> <span class="divider">/</span>
 		</li>
 		<li class="active">
-			<a href="{% url admin.views.category_edit category.id %}">{{ category.name }}</a>
+			<a href="{% url "admin.views.category_edit" category.id %}">{{ category.name }}</a>
 		</li>
 		{% else %}
 		<li>
-			<a href="{% url admin.views.category %}">Categories</a> <span class="divider">/</span>
+			<a href="{% url "admin.views.category" %}">Categories</a> <span class="divider">/</span>
 		</li>
 		<li class="active">
-			<a href="{% url admin.views.category_add %}">Add</a>
+			<a href="{% url "admin.views.category_add" %}">Add</a>
 		</li>
 		{% endif %}
 		</ul>
 		<form class="form-vertical"
 		{% if mode and mode|lower == "edit" %}
-		action="{% url admin.views.category_edit category.id %}"
+		action="{% url "admin.views.category_edit" category.id %}"
 		{% else %}
-		action="{% url admin.views.category_add %}"
+		action="{% url "admin.views.category_add" %}"
 		{% endif %}
 		 method="post">
 		 	{% if success_form %}
@@ -155,7 +155,7 @@ $(document).ready(function () {
 	// suggest slug
 	$('a#suggestSlug').click(function(){
 		$.ajax({
-			url: '{% url admin.views.category_get_slug %}',
+			url: '{% url "admin.views.category_get_slug" %}',
 			type: "GET",
 			data: {str: $("input[name=name]").val()},
 			success: function( data ) {

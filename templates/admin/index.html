@@ -16,29 +16,29 @@
 			<ul class="nav nav-list">
 				<li class="nav-header">Menu</li>
 				<li class="active">
-    				<a href="{% url admin.views.index %}">
+    				<a href="{% url "admin.views.index" %}">
     					<i class="icon-white icon-home"></i> Home
     				</a>
 				</li>
 				<li>
-					<a href="{% url admin.views.profile %}">
+					<a href="{% url "admin.views.profile" %}">
     					<i class="icon-user"></i> Profile
     				</a>
 				</li>
 				<li class="nav-header">Blog</li>
 				<li>
-					<a href="{% url admin.views.category %}">
+					<a href="{% url "admin.views.category" %}">
     					<i class="icon-tags"></i> Categories
     				</a>
 				</li>
 				<li>
-					<a href="{% url admin.views.blog_edit_settings %}">
+					<a href="{% url "admin.views.blog_edit_settings" %}">
     					<i class="icon-cog"></i> Settings
     				</a>
 				</li>
 				<li class="divider"></li>
 				<li>
-					<a href="{% url admin.views.logout %}">
+					<a href="{% url "admin.views.logout" %}">
     					<i class="icon-off"></i> Log out
     				</a>
 				</li>

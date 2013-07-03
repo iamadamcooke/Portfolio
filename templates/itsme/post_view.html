@@ -12,7 +12,7 @@
 	<meta property="og:title" content="{{ post.title }}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="{% if post_content.get_all_pictures %}{{ post_content.get_all_pictures|first|last }}{% else %}{{ STATIC_URL }}img/logo.png{% endif %}" />
-	<meta property="og:url" content="{{ BASE_URL }}{% url itsme.views.post_view post.slug %}" />
+	<meta property="og:url" content="{{ BASE_URL }}{% url "itsme.views.post_view" post.slug %}" />
 	{% if post_content.get_all_paragraphs %}<meta property="og:description" content="{{ post_content.get_all_paragraphs|first|remove_bbcode|escape }}" />{% endif %}
 	<meta property="og:site_name" content="{{ blog.site_title }}" />
 {% endblock %}
@@ -35,14 +35,14 @@
 				<ul class="unstyled">
 				{% if previous_post %}
 					<li class="prev-post">
-						<a href="{% url itsme.views.post_view previous_post.slug %}" title="{{ previous_post.title|escape }}">
+						<a href="{% url "itsme.views.post_view" previous_post.slug %}" title="{{ previous_post.title|escape }}">
 							&larr; Older
 						</a>
 					</li>
 				{% endif %}
 				{% if next_post %}
 					<li class="next-post {% if previous_post %}exists-previous{% endif %}">
-						<a href="{% url itsme.views.post_view next_post.slug %}" title="{{ next_post.title|escape }}">
+						<a href="{% url "itsme.views.post_view" next_post.slug %}" title="{{ next_post.title|escape }}">
 							Newer &rarr;
 						</a>
 					</li>

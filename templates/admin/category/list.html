@@ -47,7 +47,7 @@
 				<input type="checkbox" name="id[]" id="id" value="{{ c.id }}" class="checkbox">
 			</td>
 			<td>
-				<a href="{% url admin.views.category_edit c.id %}">
+				<a href="{% url "admin.views.category_edit" c.id %}">
 					{{ c.name|safe }}
 				</a>
 			</td>
@@ -164,7 +164,7 @@ $(document).ready(function () {
 			$('#confirmDelete').click(function(){
 				$('#mymodal').modal('hide');
 				$.ajax({
-					url: '{% url admin.views.category_delete %}',
+					url: '{% url "admin.views.category_delete" %}',
 					type: "POST",
 					data: {'id[]': id_checked, 'csrfmiddlewaretoken': '{{csrf_token}}'},
 					beforeSend: function() {

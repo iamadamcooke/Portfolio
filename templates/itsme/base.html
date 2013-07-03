@@ -9,14 +9,14 @@
 	
 	<title>{% block page_title %}{% endblock %}</title>
 	<meta name="description" content="{% block page_description %}{% endblock %}">
-	<meta name="author" content="{% block page_author %}Jhon Adri&aacute;n Cer&oacute;n{% endblock %}">
+	<meta name="author" content="{% block page_author %}Adam Cooke{% endblock %}">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<meta name="GOOGLEBOT" content="NOODP">
 	<meta name="googlebot" content="noodp">
 	
-	<link rel="alternate" title="Update blog articles of Jhon Adri&aacute;n Cer&oacute;n" href="{{ BASE_URL }}/feed/" type="application/rss+xml">
+	<link rel="alternate" title="Update blog articles of Adam Cooke" href="{{ BASE_URL }}/feed/" type="application/rss+xml">
 	
 	<!-- stylesheets -->
 	{% block stylesheets %}
@@ -63,7 +63,7 @@
 		{% block header %}
 			<div class="span4 offset1 logo">
 				<a href="{{ BASE_URL }}">
-					<img src="{{ STATIC_URL }}img/logo.png" alt="Jhon Adrián Cerón">
+					<img src="{{ STATIC_URL }}img/logo.png" alt="Adam Cooke">
 				</a>
 			</div><!-- span4 -->
 			<nav class="span6">
@@ -73,7 +73,7 @@
 						<a href="{{ BASE_URL }}">Blog</a>
 					</li>
 					<li {% if nav_active and nav_active|lower == "work" %}class="active"{% endif %}>
-						<a href="{% url itsme.views.work %}">Work</a>
+						<a href="{% url "itsme.views.work" %}">Work</a>
 					</li>
 					{% comment %}
 					<li {% if nav_active and nav_active|lower == "blog" %}class="active"{% endif %}>
@@ -81,10 +81,10 @@
 					</li>
 					{% endcomment %}
 					<li {% if nav_active and nav_active|lower == "about" %}class="active"{% endif %}>
-						<a href="{% url itsme.views.about %}">About</a>
+						<a href="{% url "itsme.views.about" %}">About</a>
 					</li>
 					<li class="last {% if nav_active and nav_active|lower == "contact" %}active{% endif %}">
-						<a href="{% url itsme.views.contact %}">Contact</a>
+						<a href="{% url "itsme.views.contact" %}">Contact</a>
 					</li>
 				</ul>
 			{% endblock %}
@@ -107,7 +107,7 @@
 		<footer class="row" id="footer">
 		{% block footer %}
 			<div class="span10 offset1 content-footer">
-				Copyright &copy; {%  now  "Y" %} Jhon Adrián Cerón.
+				Copyright &copy; {%  now  "Y" %} Adam Cooke.
 			</div>
 		{% endblock %}
 		</footer>

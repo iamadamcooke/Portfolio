@@ -23,13 +23,13 @@
 <article class="{% if forloop.last %}last-article{% endif %}">
 	<header>
 		<h2>
-			<a href="{% url itsme.views.post_view post.slug %}" class="alternative">{{ post.title }}</a>
+			<a href="{% url "itsme.views.post_view" post.slug %}" class="alternative">{{ post.title }}</a>
 		</h2>
 		<time datetime="{{ post.date|date:"Y-m-d" }}">{{ post.date|date:"N d, Y" }}</time>
 	</header>
 	{{ post.content|post_get_description|safe }}
 	<p class="read-more">
-		<a href="{% url itsme.views.post_view post.slug %}">Continue reading &rarr;</a>
+		<a href="{% url "itsme.views.post_view" post.slug %}">Continue reading &rarr;</a>
 	</p>
 </article>
 {% empty %}
@@ -46,12 +46,12 @@
 <ul class="pager post-nav">
 	{% if posts.has_previous %}
 	<li class="previous">
-		<a href="{% url itsme.views.index posts.previous_page_number %}">&larr; Older posts</a>
+		<a href="{% url "itsme.views.index" posts.previous_page_number %}">&larr; Older posts</a>
 	</li>
 	{% endif %}
 	{% if posts.has_next %}
 	<li class="next">
-		<a href="{% url itsme.views.index posts.next_page_number %}">Newer posts &rarr;</a>
+		<a href="{% url "itsme.views.index" posts.next_page_number %}">Newer posts &rarr;</a>
 	</li>
 	{% endif %}
 </ul>

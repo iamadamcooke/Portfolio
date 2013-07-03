@@ -7,7 +7,7 @@
 <h1>
 	Posts
 	<small>
-		<a href="{% url admin.views.post_edit %}" class="btn"><i class="icon-plus"></i>Add new</a>
+		<a href="{% url "admin.views.post_edit" %}" class="btn"><i class="icon-plus"></i>Add new</a>
 	</small>
 </h1>
 <p></p>
@@ -46,7 +46,7 @@
 function loadAjax(page, search, order_by, order){
 	$(function() {
 		$.ajax({
-			url: '{% url admin.views.post_list %}',
+			url: '{% url "admin.views.post_list" %}',
 			type: "GET",
 			data: {page: page, search: search,
 				   order_by: order_by, order: order},

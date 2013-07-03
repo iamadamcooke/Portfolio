@@ -7,17 +7,17 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>{{ BASE_URL }}{% url itsme.views.work %}</loc>
+		<loc>{{ BASE_URL }}{% url "itsme.views.work" %}</loc>
 	</url>
 	<url>
-		<loc>{{ BASE_URL }}{% url itsme.views.about %}</loc>
+		<loc>{{ BASE_URL }}{% url "itsme.views.about" %}</loc>
 	</url>
 	<url>
-		<loc>{{ BASE_URL }}{% url itsme.views.contact %}</loc>
+		<loc>{{ BASE_URL }}{% url "itsme.views.contact" %}</loc>
 	</url>
 	{% for post in posts %}
 	<url>
-		<loc>{{ BASE_URL }}{% url itsme.views.post_view post.slug %}</loc>
+		<loc>{{ BASE_URL }}{% url "itsme.views.post_view" post.slug %}</loc>
 		<lastmod>{{ post.date|date:"Y-m-d" }}</lastmod>
 	</url>
 	{% endfor %}

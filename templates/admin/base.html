@@ -60,7 +60,7 @@ it sets the current item navigation.
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="{% url admin.views.index %}">
+				<a class="brand" href="{% url "admin.views.index" %}">
 				{% block brand %}
 					{% if user.first_name|length != 0 %}
 					{{ user.first_name }}
@@ -76,7 +76,7 @@ it sets the current item navigation.
 						{% comment %}
 						<!-- home -->
 						<li {% if not nav_active or nav_active|lower == "home" %}class="active"{% endif %}>
-							<a href="{% url admin.views.index %}">Home</a>
+							<a href="{% url "admin.views.index" %}">Home</a>
 						</li>
 						{% endcomment %}
 						<!-- posts -->
@@ -93,19 +93,19 @@ it sets the current item navigation.
 							</a>
 							<ul class="dropdown-menu">
 								<li {% if nav_active|lower == "posts" %}class="active"{% endif %}>
-									<a href="{% url admin.views.post %}">All Posts</a>
+									<a href="{% url "admin.views.post" %}">All Posts</a>
 								</li>
 								<li {% if nav_active|lower == "categories" %}class="active"{% endif %}>
-									<a href="{% url admin.views.category %}">Categories</a>
+									<a href="{% url "admin.views.category" %}">Categories</a>
 								</li>
 								<li  {% if nav_active|lower == "blog" %}class="active"{% endif %}>
-									<a href="{% url admin.views.blog_edit_settings %}">Settings</a>
+									<a href="{% url "admin.views.blog_edit_settings" %}">Settings</a>
 								</li>
 							</ul>
 						</li>
 						<!-- media -->						
 						<li {% if nav_active and nav_active|lower == "media" %}class="active"{% endif %}>
-							<a href="{% url admin.views.media %}">Media</a>
+							<a href="{% url "admin.views.media" %}">Media</a>
 						</li>
 						{% comment %}
 						<!-- <li {% if nav_active and nav_active|lower == "comments" %}class="active"{% endif %}>
@@ -114,7 +114,7 @@ it sets the current item navigation.
 						{% endcomment %}
 						<!-- work -->
 						<li {% if nav_active and nav_active|lower == "work" %}class="active"{% endif %}>
-							<a href={% url admin.views.project %}>Work</a>
+							<a href={% url "admin.views.project" %}>Work</a>
 						</li>
 						{% comment %}
 						<li class="divider-vertical"></li>
@@ -138,10 +138,10 @@ it sets the current item navigation.
 							</a>
 							<ul class="dropdown-menu">
 								<li {% if nav_active and nav_active|lower == "profile" %}class="active"{% endif %}>
-									<a href="{% url admin.views.profile %}">Profile</a>
+									<a href="{% url "admin.views.profile" %}">Profile</a>
 								</li>
 								<li>
-									<a href="{% url admin.views.logout %}">Log out</a>
+									<a href="{% url "admin.views.logout" %}">Log out</a>
 								</li>
 							</ul>
 						</li>
