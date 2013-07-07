@@ -2,7 +2,7 @@
 
 {% block page_title %}Contact{% endblock %}
 
-{% block page_description %}{{ blog.tagline|escape|default:"Adam Cooke." }}{% endblock %}
+{% block page_description %}{{ blog.tagline|escape|default:"Personal portfolio of Jhon Adrián Cerón." }}{% endblock %}
 
 {% block body_class %}contact{% endblock %}
 
@@ -20,7 +20,7 @@
 		</p>
 		{% endif %}
 	</header>
-	<form class="form-vertical" method="post" action="{{ BASE_URL }}{% url "itsme.views.contact" %}">
+	<form class="form-vertical" method="post" action="{{ BASE_URL }}{% url itsme.views.contact %}">
 		{% if warning_form %}
 		<div class="alert alert-block">
 			<a class="close" data-dismiss="alert">×</a>

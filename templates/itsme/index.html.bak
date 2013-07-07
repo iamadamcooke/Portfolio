@@ -4,9 +4,9 @@
 
 {% block body_class %}index{% endblock %}
 
-{% block page_title %}{{ blog.site_title|escape|default:"Adam Cooke" }}{% endblock %}
+{% block page_title %}{{ blog.site_title|escape|default:"Jhon Adrián Cerón" }}{% endblock %}
 
-{% block page_description %}{{ blog.tagline|escape|default:"Personal portfolio of Adam Cooke." }}{% endblock %}
+{% block page_description %}{{ blog.tagline|escape|default:"Personal portfolio of Jhon Adrián Cerón." }}{% endblock %}
 
 {% block sidebar %}
 {% include "itsme/social.html" %}
@@ -15,21 +15,21 @@
 {% block content %}
 <header>
 	<h1 class="toUppercase">
-			My name is {{ user.get_full_name|escape|default:"Adam Cooke" }}
+			My name is {{ user.get_full_name|escape|default:"Jhon Adrián Cerón" }}
 	</h1>
-	<p>{{ blog.tagline|escape|default:"Personal portfolio of Adam Cooke." }}</p>
+	<p>{{ blog.tagline|escape|default:"Personal portfolio of Jhon Adrián Cerón." }}</p>
 </header>
 {% for post in posts.object_list %}
 <article class="{% if forloop.last %}last-article{% endif %}">
 	<header>
 		<h2>
-			<a href="{% url "itsme.views.post_view" post.slug %}" class="alternative">{{ post.title }}</a>
+			<a href="{% url itsme.views.post_view post.slug %}" class="alternative">{{ post.title }}</a>
 		</h2>
 		<time datetime="{{ post.date|date:"Y-m-d" }}">{{ post.date|date:"N d, Y" }}</time>
 	</header>
 	{{ post.content|post_get_description|safe }}
 	<p class="read-more">
-		<a href="{% url "itsme.views.post_view" post.slug %}">Continue reading &rarr;</a>
+		<a href="{% url itsme.views.post_view post.slug %}">Continue reading &rarr;</a>
 	</p>
 </article>
 {% empty %}
@@ -46,12 +46,12 @@
 <ul class="pager post-nav">
 	{% if posts.has_previous %}
 	<li class="previous">
-		<a href="{% url "itsme.views.index" posts.previous_page_number %}">&larr; Older posts</a>
+		<a href="{% url itsme.views.index posts.previous_page_number %}">&larr; Older posts</a>
 	</li>
 	{% endif %}
 	{% if posts.has_next %}
 	<li class="next">
-		<a href="{% url "itsme.views.index" posts.next_page_number %}">Newer posts &rarr;</a>
+		<a href="{% url itsme.views.index posts.next_page_number %}">Newer posts &rarr;</a>
 	</li>
 	{% endif %}
 </ul>

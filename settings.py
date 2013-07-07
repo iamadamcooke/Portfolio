@@ -10,12 +10,12 @@ TEMPLATE_DEBUG = DEBUG
 PRODUCTION_ENVIRONMENT = False
 
 # Main URL for the project
-BASE_URL = 'file:///Users/adamcooke/Code/Personal/Portfolio'
+BASE_URL = 'http://127.0.0.1:8000'
 
 AUTH_PROFILE_MODULE = 'itsme.UserProfile'
 
 ADMINS = (
-     ('Jhon', 'hello@adrianceron.com'),
+     ('adamcooke', 'iamadamcooke@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -81,7 +81,7 @@ ADMIN_MEDIA_PREFIX = '%s/static/django-admin/' % BASE_URL
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    'file:///Users/adamcooke/Code/Personal/Portfolio/static/'
+    #'static/itsme',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

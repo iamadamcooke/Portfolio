@@ -9,14 +9,14 @@
 
 	<title>404 Error, Page not found</title>
 	<meta name="description" content="Page not found">
-	<meta name="author" content="Adam Cooke">
+	<meta name="author" content="Jhon Adri&aacute;n Cer&oacute;n">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<meta name="GOOGLEBOT" content="NOODP">
 	<meta name="googlebot" content="noodp">
 	
-	<link rel="alternate" title="Update blog articles of Adam Cooke" href="{{ BASE_URL }}/feed/" type="application/rss+xml">
+	<link rel="alternate" title="Update blog articles of Jhon Adri&aacute;n Cer&oacute;n" href="{{ BASE_URL }}/feed/" type="application/rss+xml">
 	
 	<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
 	<link href="{{ STATIC_URL }}css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 		<header class="row" id="header">
 			<div class="span4 offset1 logo">
 				<a href="{{ BASE_URL }}">
-					<img src="{{ STATIC_URL }}img/logo.png" alt="Adam Cooke">
+					<img src="{{ STATIC_URL }}img/logo.png" alt="Jhon Adrián Cerón">
 				</a>
 			</div><!-- span4 -->
 			<nav class="span6">
@@ -50,13 +50,13 @@
 						<a href="{{ BASE_URL }}">Blog</a>
 					</li>
 					<li>
-						<a href="{% url "itsme.views.work" %}">Work</a>
+						<a href="{% url itsme.views.work %}">Work</a>
 					</li>
 					<li>
-						<a href="{% url "itsme.views.about" %}">About</a>
+						<a href="{% url itsme.views.about %}">About</a>
 					</li>
 					<li>
-						<a href="{% url "itsme.views.contact" %}">Contact</a>
+						<a href="{% url itsme.views.contact %}">Contact</a>
 					</li>
 				</ul>
 			</nav><!-- span6 -->
@@ -74,14 +74,14 @@
 					</p>
 					<p>
 						However, if you think it is not your error or if you want to notify
-						to admin, use the <a href="{% url "itsme.views.contact" %}">contact page</a>.
+						to admin, use the <a href="{% url itsme.views.contact %}">contact page</a>.
 					</p>
 				</article>
 			</section>
 		</div>
 		<footer class="row" id="footer">
 			<div class="span10 offset1 content-footer">
-				Copyright &copy; {%  now  "Y" %} Adam Cooke.
+				Copyright &copy; {%  now  "Y" %} Jhon Adrián Cerón.
 			</div>
 		</footer>
 	</div>

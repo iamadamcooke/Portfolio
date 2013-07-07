@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls import patterns, include, url
 from rss.feeds import RSSFeed
 
 urlpatterns = patterns('',
@@ -11,4 +11,6 @@ urlpatterns = patterns('',
     url(r'^work/$', 'itsme.views.work'),
     url(r'^about/$', 'itsme.views.about'),
     url(r'^contact/$', 'itsme.views.contact'),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': '/Users/adamcooke/Code/Personal/Portfolio/static', 'show_indexes': True}),
 )

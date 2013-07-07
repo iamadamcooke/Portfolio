@@ -81,7 +81,7 @@
 		<footer class="row" id="footer">
 		{% block footer %}
 			<div class="span10 offset1 content-footer">
-				Copyright &copy; {%  now  "Y" %} Adam Cooke.
+				Copyright &copy; {%  now  "Y" %} Jhon Adrián Cerón.
 			</div>
 		{% endblock %}
 		</footer>
