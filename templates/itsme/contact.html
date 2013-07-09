@@ -1,6 +1,6 @@
 {% extends "itsme/base.html" %}
 
-{% block page_title %}Contact{% endblock %}
+{% block page_title %}Adam Cooke :: Contact{% endblock %}
 
 {% block page_description %}{{ blog.tagline|escape|default:"Adam Cooke." }}{% endblock %}
 
@@ -88,7 +88,7 @@
 <p>You can use the below ways to contact me.</p>
 <ul class="unstyled say-hello">
 	<li class="email">
-		<a href="mailto:{{ user.email|default:"hello@adrianceron.com" }}">{{ user.email|default:"hello@adrianceron.com" }}</a>
+		<a href="mailto:{{ user.email|default:"iamadamcooke@gmail.com" }}">{{ user.email|default:"iamadamcooke@gmail.com" }}</a>
 	</li>
 	{% if user.get_profile.phone %}
 	<li class="phone">
@@ -96,7 +96,7 @@
 	</li>
 	{% endif %}
 	<li class="skype">
-		<a href="skype:de_la_cuesta_13?call">Skype</a>
+		<a href="skype:iamadamcooke?call">Skype</a>
 	</li>
 </ul>
 {% endblock %}

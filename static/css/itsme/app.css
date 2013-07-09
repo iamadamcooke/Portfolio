@@ -123,7 +123,7 @@
    }
    
    header#header nav ul li.active a{
-   	background: #FF7260;
+   	background: #129793;
    	color: #FFFFFF;
    	padding: 1px 4px;
    	text-decoration: none;
@@ -131,7 +131,7 @@
    
    header#header nav ul li.active a:hover{
    	background: #FFFFFF;
-   	color: #FF7260;
+   	color: #129793;
    	text-decoration: none;
    }
    

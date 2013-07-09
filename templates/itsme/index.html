@@ -4,56 +4,32 @@
 
 {% block body_class %}index{% endblock %}
 
-{% block page_title %}{{ blog.site_title|escape|default:"Adam Cooke" }}{% endblock %}
+{% block page_title %}Adam Cooke{% endblock %}
 
-{% block page_description %}{{ blog.tagline|escape|default:"Personal portfolio of Adam Cooke." }}{% endblock %}
+{% block page_description %}I am a third year Computer Science student attending Georgia Tech. I'm a developer, an aspiring coach, 
+and an avid traveler.{% endblock %}
 
-{% block sidebar %}
-{% include "itsme/social.html" %}
+{% block main %}
+<div class="row heading-trick">
+	<div class="span10 offset1 heading">
+		<h1>About</h1>
+		<h3>
+			I am a third year Computer Science student attending Georgia Tech. 
+		</h3>
+		<h3>
+			I'm a developer, an aspiring coach, and an avid traveler.
+		</h3>
+	</div>
+</div>
+<section class="row">
+	<article id="content" class="span10 offset1">
+		{{ resume|safe|default:"<p>Here must be information about me.</p>" }}
+	</article>
+</section>
+{% endblock %}
+{% block footer %}
+<div class="span10 offset1 social-media">
+	{% include "itsme/social.html" with hide_title="True" %}
+</div>
 {% endblock %}
 
-{% block content %}
-<header>
-	<h1 class="toUppercase">
-			My name is {{ user.get_full_name|escape|default:"Adam Cooke" }}
-	</h1>
-	<p>{{ blog.tagline|escape|default:"Personal portfolio of Adam Cooke." }}</p>
-</header>
-{% for post in posts.object_list %}
-<article class="{% if forloop.last %}last-article{% endif %}">
-	<header>
-		<h2>
-			<a href="{% url "itsme.views.post_view" post.slug %}" class="alternative">{{ post.title }}</a>
-		</h2>
-		<time datetime="{{ post.date|date:"Y-m-d" }}">{{ post.date|date:"N d, Y" }}</time>
-	</header>
-	{{ post.content|post_get_description|safe }}
-	<p class="read-more">
-		<a href="{% url "itsme.views.post_view" post.slug %}">Continue reading &rarr;</a>
-	</p>
-</article>
-{% empty %}
-<article class="last-article">
-	<header>
-		<h2>There aren't found articles.</h2>
-	</header>
-	<p>
-		Unfortunately, there aren't articles published. However, will soon have interesting posts for you.
-	</p>
-</article>
-{% endfor %}
-{% if posts.has_other_pages %}
-<ul class="pager post-nav">
-	{% if posts.has_previous %}
-	<li class="previous">
-		<a href="{% url "itsme.views.index" posts.previous_page_number %}">&larr; Older posts</a>
-	</li>
-	{% endif %}
-	{% if posts.has_next %}
-	<li class="next">
-		<a href="{% url "itsme.views.index" posts.next_page_number %}">Newer posts &rarr;</a>
-	</li>
-	{% endif %}
-</ul>
-{% endif %}
-{% endblock %}

@@ -3,10 +3,11 @@ from rss.feeds import RSSFeed
 
 urlpatterns = patterns('',
     url(r'^admin/', include('admin.urls')),
-    url(r'^$', 'itsme.views.index'),
+    url(r'^$', 'itsme.views.about'),
     url(r'^sitemap\.xml$', 'itsme.views.sitemap'),
     url(r'^feed/$', RSSFeed()),
-    url(r'^page/(?P<page>\d+)/$', 'itsme.views.index'),
+    url(r'^page/(?P<page>\d+)/$', 'itsme.views.blog'),
+    url(r'^blog/$', 'itsme.views.blog'),
     url(r'^blog/(?P<slug>[\w-]+)/$', 'itsme.views.post_view'),
     url(r'^work/$', 'itsme.views.work'),
     url(r'^about/$', 'itsme.views.about'),

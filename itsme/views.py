@@ -15,7 +15,7 @@ from admin.views import blog_get_or_create
 from itsme.bbcodeparser import BBCodeParser
 from itsme.models import Post, Project, Message
 
-def index(request, page=1):
+def blog(request, page=1):
     
     if re.match(r'^/page/1/$', request.path):
         return redirect('/', permanent=True)
@@ -37,11 +37,12 @@ def index(request, page=1):
     except (EmptyPage, InvalidPage):
         posts = paginator.page(paginator.num_pages)
     
-    return render_to_response('itsme/index.html',
+    return render_to_response('itsme/blog.html',
                               {
                                'user': user,
                                'blog': blog,
                                'posts': posts,
+                               'nav_active':'blog',
                                },
                               context_instance=RequestContext(request))
 
@@ -129,7 +130,7 @@ def about(request):
     resume = BBCodeParser(user.get_profile().resume)
     resume = resume.bbcode_to_html(resume.escape_html())
     
-    return render_to_response('itsme/about.html',
+    return render_to_response('itsme/index.html',
                               {
                                'user': user,
                                'blog': blog,
