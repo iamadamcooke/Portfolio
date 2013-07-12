@@ -12,11 +12,11 @@
 		<h1>Contact</h1>
 		{% if user.get_profile.available_for_work %}
 		<p class="available">
-			I'm Available For Freelance Works
+			I'm Available For Freelance Projects and Consultaion(s)
 		</p>
 		{% else %}
 		<p class="unavailable">
-			I'm Not Available For Work In Projects
+			I'm Not Available For Freelance Projects
 		</p>
 		{% endif %}
 	</header>
@@ -32,7 +32,7 @@
 			<div class="alert alert-success alert-block">
 				<a class="close" data-dismiss="alert">×</a>
   				<h4>Thank you!</h4>
-  				I will reply your message immediately i read it.
+  				I will reply your message immediately when I read it.
 			</div>
 			{% else %}
 				{% if error_form %}
@@ -71,7 +71,7 @@
 			<label class="control-label" for="form-message">Message</label>
 			<div class="controls">
 				<textarea name="message" id="form-message" required="required"
-				placeholder="Talk to me with confidence. I'm at your service :)"
+				placeholder="Enter Your Message"
 				class="span6" rows="6">{% if request.POST.message and warning_form %}{{ request.POST.message }}{% endif %}</textarea>
 				{% if warning_form and error_message %}
 				<p class="help-block">{{ error_message_msg }}</p>
@@ -84,7 +84,7 @@
 {% endblock %}
 
 {% block sidebar %}
-<h3>Just prefer say hello?</h3>
+<h3>Just prefer to say hello?</h3>
 <p>You can use the below ways to contact me.</p>
 <ul class="unstyled say-hello">
 	<li class="email">

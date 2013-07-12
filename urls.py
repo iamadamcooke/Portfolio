@@ -14,4 +14,6 @@ urlpatterns = patterns('',
     url(r'^contact/$', 'itsme.views.contact'),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': '/Users/adamcooke/Code/Personal/Portfolio/static', 'show_indexes': True}),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': '/Users/adamcooke/Code/Personal/Portfolio/media', 'show_indexes': True}),
 )

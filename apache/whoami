@@ -1,15 +1,15 @@
 # This would must be configuration of apache for project
 <VirtualHost *:80>
-    DocumentRoot /var/django/projects/whoami
+    DocumentRoot /var/django/projects/Portfolio
     ServerName adrianceron.com
     
-    ServerAdmin hello@adrianceron.com
+    ServerAdmin iamadamcooke@gmail.com
 
-    WSGIScriptAlias / /var/django/projects/whoami/apache/django.wsgi
+    WSGIScriptAlias / /var/django/projects/Portfolio/apache/django.wsgi
 
-    ErrorLog /var/django/projects/whoami/logs/apache_error.log
+    ErrorLog /var/django/projects/Portfolio/logs/apache_error.log
     
-    <Directory /var/django/projects/whoami>
+    <Directory /var/django/projects/Portfolio>
         Order allow,deny
         Allow from all
     </Directory>
@@ -17,20 +17,20 @@
     LogLevel warn
 
     RewriteEngine On
-    RewriteCond %{HTTP_HOST} ^www.adrianceron.com$ [NC]
-    RewriteRule ^(.*)$ http://adrianceron.com/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www.iamadamcooke.com$ [NC]
+    RewriteRule ^(.*)$ http://iamadamcooke.com/$1 [R=301,L]
     
-    AliasMatch (?i)^(.*)\.(ico|jpg|png|txt)$ /var/django/projects/whoami/static/root/$1.$2
+    AliasMatch (?i)^(.*)\.(ico|jpg|png|txt)$ /var/django/projects/Portfolio/static/root/$1.$2
     
 </VirtualHost>
 
 <VirtualHost *:80>
-    DocumentRoot /var/django/projects/whoami/static/
-    ServerName static.adrianceron.com
+    DocumentRoot /var/django/projects/Portfolio/static/
+    ServerName static.iamadamcooke.com
 
-    ErrorLog /var/django/projects/whoami/logs/apache_error.log
+    ErrorLog /var/django/projects/Portfolio/logs/apache_error.log
 
-    <Directory /var/django/projects/whoami/static>
+    <Directory /var/django/projects/Portfolio/static>
 	Order deny,allow
         Allow from all
     </Directory>
@@ -38,12 +38,12 @@
 </VirtualHost>
 
 <VirtualHost *:80>
-    DocumentRoot /var/django/projects/whoami/media/
-    ServerName media.adrianceron.com
+    DocumentRoot /var/django/projects/Portfolio/media/
+    ServerName media.iamadamcooke.com
 
-    ErrorLog /var/django/projects/whoami/logs/apache_error.log
+    ErrorLog /var/django/projects/Portfolio/logs/apache_error.log
 
-    <Directory /var/django/projects/whoami/media>
+    <Directory /var/django/projects/Portfolio/media>
         Order deny,allow
 	Allow from all
     </Directory>
@@ -51,10 +51,10 @@
 </VirtualHost>
 
 <VirtualHost *:80>
-    ServerName urltophpmyadmin.adrianceron.com
+    ServerName urltophpmyadmin.iamadamcooke.com
     Include /etc/apache2/conf.d/phpmyadmin.conf
     
     # phpmyadmin.conf
-    #ServerName urltophpmyadmin.adrianceron.com
+    #ServerName urltophpmyadmin.iamadamcooke.com
     #DocumentRoot /path/to/phpmyadmin
 </VirtualHost>
