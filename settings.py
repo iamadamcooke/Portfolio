@@ -4,13 +4,13 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 # Absolute path to the project directory
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-PRODUCTION_ENVIRONMENT = False
+PRODUCTION_ENVIRONMENT = True
 
 # Main URL for the project
-BASE_URL = 'http://127.0.0.1:8000'
+BASE_URL = 'http://www.iamadamcooke.com'
 
 AUTH_PROFILE_MODULE = 'itsme.UserProfile'
 
@@ -22,10 +22,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'whoami',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'Portfolio',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': 'root',                  # Not used with sqlite3.
+        'PASSWORD': 'google369',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -77,7 +77,7 @@ STATIC_URL = '%s/static/' % BASE_URL
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '%s/static/django-admin/' % BASE_URL
+ADMIN_MEDIA_PREFIX = '%s/static/django-admin/static/' % BASE_URL
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -156,6 +156,11 @@ LOGGING = {
         },
     }
 }
+
+'''
+1.5 needs specified allowed hosts
+'''
+ALLOWED_HOSTS = ['.iamadamcooke.com']
 
 """
 Custom configuration
