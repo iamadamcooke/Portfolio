@@ -1,7 +1,7 @@
 # This would must be configuration of apache for project
 <VirtualHost *:80>
     DocumentRoot /var/django/projects/Portfolio
-    ServerName adrianceron.com
+    ServerName iamadamcooke.com
     
     ServerAdmin iamadamcooke@gmail.com
 
