@@ -173,7 +173,7 @@ def contact(request):
             warning_form = True     
             
         if len(message) == 0:
-            error_message, error_message_msg = True, 'Please, write a message for i reply you.'      
+            error_message, error_message_msg = True, 'Please, write a message.'      
             warning_form = True 
             
         # get (separated) current year, month and day

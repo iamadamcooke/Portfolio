@@ -199,8 +199,8 @@
    	background: transparent url(../../img/LinkedIn.png) no-repeat 0 0;
    }
    
-   ul#social li a.rss{
-   	background: transparent url(../../img/RSS.png) no-repeat 0 0;
+   ul#social li a.twitter{
+   	background: transparent url(../../img/twitter.png) no-repeat 0 0;
    }
    
    /* Footer */
@@ -615,9 +615,9 @@
    	
    	/* About Page */
    	
-   	body.about .heading h2{ width: 80%; }
+   	body.index .heading h2{ width: 80%; }
    	
-   	body.about #content{
+   	body.index #content{
    		column-count: 2; 
    		-moz-column-count: 2; 
    		-o-column-count: 2; 
@@ -648,12 +648,12 @@
    	
    	/* About Page */
    	
-   	body.about .heading h2{
+   	body.index .heading h2{
    	    font-size: 16px;
    		width: 90%;
    	}
    	
-   	body.about #content{
+   	body.index #content{
    		column-count: 2; 
    		-moz-column-count: 2; 
    		-o-column-count: 2; 
