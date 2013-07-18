@@ -18,7 +18,7 @@
 
     RewriteEngine On
     RewriteCond %{HTTP_HOST} ^www.iamadamcooke.com$ [NC]
-    RewriteRule ^(.*)$ http://iamadamcooke.com/$1 [R=301,L]
+    RewriteRule ^/(.*)$ http://www.iamadamcooke.com/$1 [R=301,L]
     
     AliasMatch (?i)^(.*)\.(ico|jpg|png|txt)$ /var/django/projects/Portfolio/static/root/$1.$2
     

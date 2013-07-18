@@ -162,6 +162,13 @@ LOGGING = {
 '''
 ALLOWED_HOSTS = ['.iamadamcooke.com']
 
+#Email settings to allow contact form to send message
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'google369'
+EMAIL_HOST_USER = 'iamadamcooke@gmail.com'
+EMAIL_HOST_PORT = 587
+EMAIL_USE_TLS = True
+
 """
 Custom configuration
 """
