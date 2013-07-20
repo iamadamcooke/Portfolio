@@ -14,6 +14,7 @@ from django.template import RequestContext
 from admin.views import blog_get_or_create
 from itsme.bbcodeparser import BBCodeParser
 from itsme.models import Post, Project, Message
+from django.template.defaulttags import csrf_token
 
 def blog(request, page=1):
     

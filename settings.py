@@ -113,6 +113,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.middleware.csrf.CsrfResponseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 )
@@ -163,11 +164,11 @@ LOGGING = {
 ALLOWED_HOSTS = ['.iamadamcooke.com']
 
 #Email settings to allow contact form to send message
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = 'google369'
-EMAIL_HOST_USER = 'iamadamcooke@gmail.com'
-EMAIL_HOST_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'iamadamcooke@gmail.com'
+EMAIL_HOST_PASSWORD = 'google369'
+EMAIL_HOST_PORT = 587
 
 """
 Custom configuration
