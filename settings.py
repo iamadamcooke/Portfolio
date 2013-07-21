@@ -179,7 +179,7 @@ ALLOWED_HOSTS = ['.iamadamcooke.com']
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'iamadamcooke@gmail.com'
-EMAIL_HOST_PASSWORD = 'google369'
+EMAIL_HOST_PASSWORD = '**********'
 EMAIL_HOST_PORT = 587
 
 """
