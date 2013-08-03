@@ -15,7 +15,7 @@ BASE_URL = 'http://www.iamadamcooke.com'
 AUTH_PROFILE_MODULE = 'itsme.UserProfile'
 
 ADMINS = (
-     ('adamcooke', 'iamadamcooke@gmail.com'),
+#     ('adamcooke', 'iamadamcooke@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'itsme',
     'admin',
+    'google_analytics',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -167,7 +168,7 @@ ALLOWED_HOSTS = ['.iamadamcooke.com']
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'iamadamcooke@gmail.com'
-EMAIL_HOST_PASSWORD = '**********'
+EMAIL_HOST_PASSWORD = 'google369'
 EMAIL_HOST_PORT = 587
 
 """
